@@ -21,7 +21,7 @@ workers=4
 for seed in 10 100 1; do
     echo 'Execute 3 times'
     echo $seed
-    out_dir='result_ablation/transition@ratio_'${ratio}'_seed_'${seed}
+    out_dir='result/transition@ratio_'${ratio}'_seed_'${seed}
     # snapshot=$out_dir'/model_best.pth.tar'
     CUDA_VISIBLE_DEVICES=${GPU_ID} python3 ./main_ours.py \
         ${data_dir} \

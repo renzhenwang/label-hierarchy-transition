@@ -23,7 +23,7 @@ sys.path.insert(0, '.')
 
 
 def arg_parse():
-    parser = argparse.ArgumentParser(description='PyTorch HSE Deployment')
+    parser = argparse.ArgumentParser(description='PyTorch LHT Deployment')
     parser.add_argument('data', metavar='DIR',
                         help='path to dataset')
     parser.add_argument('--ratio', type=float, help='Proportion of species label'),
@@ -392,5 +392,3 @@ def save_checkpoint(state, is_best, checkpoint, filename='checkpoint.pth.tar', e
 
 if __name__ == "__main__":
     main()
-
-

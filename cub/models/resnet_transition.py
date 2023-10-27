@@ -42,8 +42,7 @@ class ResNetTransition(nn.Module):
         for i in range(len(label_hierarchy)-1):
             self.transition_net_left.append(nn.Linear(self.split_dim, label_hierarchy[i] * self.sprite_dim))
             self.transition_net_right.append(nn.Linear(self.split_dim, self.sprite_dim * label_hierarchy[i+1]))
-
-        self.transition_matrices = []
+        
         W_s2f = np.load('models/transition_weights.npz')['W_s2f']
         self.W_s2f = torch.tensor(W_s2f, requires_grad=False).float().cuda()
         self.gamma_s2f = nn.Parameter(torch.ones(1))
