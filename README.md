@@ -20,7 +20,7 @@
 ## Dataset Preparation
 * Download datasets
     * [CUB-200-201](https://www.vision.caltech.edu/datasets/cub_200_2011/)
-    * [Aircraf](https://www.robots.ox.ac.uk/vgg/data/fgvc-aircraft)
+    * [Aircraft](https://www.robots.ox.ac.uk/vgg/data/fgvc-aircraft)
     * [Stanford Car](https://www.kaggle.com/datasets/jessicali9530/stanford-cars-dataset)
 * Extract the datasets to `data_source/cub_dataset/`, `data_source/air_dataset/` and `data_source/car_dataset/`, respectively.
 * Reconstruct the datasets following the Birds.xls, Air.xls, and Cars.xls (borrowed from [Fine-Grained-or-Not](https://github.com/PRIS-CV/Fine-Grained-or-Not))
