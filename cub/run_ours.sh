@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # deploy parameters for running our methods
-data_dir='../cub-200-2011'   ## path to images
+data_dir='../data_target/CUB-200-2011'   ## path to images
 ratio=0.1                    ## relabeled ratio for semisupervised/semi-supervised setting
 GPU_ID='0'                   ## device id
 relabel='family'             ## chosen from ['order', 'family']
@@ -21,7 +21,7 @@ workers=4
 for seed in 10 100 1; do
     echo 'Execute 3 times'
     echo $seed
-    out_dir='result/transition@ratio_'${ratio}'_seed_'${seed}
+    out_dir='result/ours@ratio_'${ratio}'_seed_'${seed}
     # snapshot=$out_dir'/model_best.pth.tar'
     CUDA_VISIBLE_DEVICES=${GPU_ID} python3 ./main_ours.py \
         ${data_dir} \

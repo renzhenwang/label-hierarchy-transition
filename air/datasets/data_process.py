@@ -39,7 +39,7 @@ def image2class_file(root_path, label_dict, dataset='train', save_path=None):
     for i in range(len(image_list)):
         for j in range(len(dataset_list)):
             if image_list[i][:7] == dataset_list[j][:7]:
-                # 获取类别标签
+                
                 label_key = dataset_list[j][8:].strip()
                 print(label_key)
                 label_value = label_dict[label_key]
@@ -60,8 +60,8 @@ def image2class_file(root_path, label_dict, dataset='train', save_path=None):
 
 
 if __name__ == '__main__':
-    root_path = 'G:/dataset/fgvc-aircraft-2013b/data'
-    save_path = 'G:/dataset/Aircraft'
+    root_path = '../../data_source/air_dataset/fgvc-aircraft-2013b/data'
+    save_path = '../../data_target/Aircraft'
 
     df_class = pd.read_excel("Air.xls", usecols=[0, 1], names=None)
 

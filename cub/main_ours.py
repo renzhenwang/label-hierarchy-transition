@@ -100,8 +100,8 @@ def main():
     # Create dataloader
     print("==> Creating dataloader...")
     data_dir = args.data
-    test_loader = get_test_set(os.path.join(data_dir, 'dataset/test/'), args)
-    train_loader = get_train_set(os.path.join(data_dir, 'dataset/train/'), args)
+    test_loader = get_test_set(os.path.join(data_dir, 'test/'), args)
+    train_loader = get_train_set(os.path.join(data_dir, 'train/'), args)
 
     # load the network
     num_classes = 200

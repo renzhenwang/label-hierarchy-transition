@@ -31,11 +31,11 @@ def image2class_file(root_path, label_dict, save_path):
         image_path = os.path.join(base_path, images[i][0][0])
         print('*' * 10, image_path)
 
-        file_name = images[i][0][0]  # 文件名
+        file_name = images[i][0][0]  # fine name
         file_name = file_name.split('/')[1]
         print(file_name)
 
-        classid = images[i][5][0][0]  # 类别
+        classid = images[i][5][0][0]  # class id
         # classid=np.array2string(classid)
         classid = classid.astype(np.int32)
         print(classid)
@@ -66,8 +66,8 @@ def image2class_file(root_path, label_dict, save_path):
 
 
 if __name__ == "__main__":
-    root_path = 'G:/dataset/'
-    save_path = 'G:/dataset/Cars'
+    root_path = '../../data_source/car_dataset'
+    save_path = '../../data_target/Cars'
 
     df_class = pd.read_excel("Cars.xlsx", usecols=[0, 1], names=None)
     label_dict = df2dict(df_class)

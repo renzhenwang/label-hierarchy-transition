@@ -9,15 +9,15 @@ time_start = time.time()
 
 
 class config(object):
-    path = '/mnt/group-ai-medical-2/private/renzhenwang/CUB_200_2011/'
+    path = '../../data_source/cub_dataset/CUB_200_2011/'
     ROOT_TRAIN = path + 'images/train/'
     ROOT_TEST = path + 'images/test/'
     BATCH_SIZE = 16
 
 path_images = config.path + 'images.txt'
 path_split = config.path + 'train_test_split.txt'
-trian_save_path = config.path + 'dataset/train/'
-test_save_path = config.path + 'dataset/test/'
+trian_save_path = '../../data_target/CUB-200-2011/train/'
+test_save_path = '../../data_target/CUB-200-2011/test/'
  
 
 images = []
